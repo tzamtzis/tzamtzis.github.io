@@ -31,7 +31,13 @@ author:
   location: "Thessaloniki, Greece"
   role: "Team Lead & Founding member @ Baresquare"
 
-email: "panagiotis@baresquare.com"
+email: "panagiotis@tzamtzis.gr"
+
+emails:
+  - label: Work
+    address: panagiotis@baresquare.com
+  - label: Personal
+    address: panagiotis@tzamtzis.gr
 
 # ============================================================
 # Social / external links
