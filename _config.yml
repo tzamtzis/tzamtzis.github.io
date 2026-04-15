@@ -24,7 +24,9 @@ baseurl: "" # leave empty for a user/organization site at the domain root
 # ============================================================
 # Author / identity
 # ============================================================
-author:
+author: "Panagiotis Tzamtzis"
+
+author_info:
   name: "Panagiotis Tzamtzis"
   nickname: "Tzam"
   email: "panagiotis@baresquare.com"
