@@ -1,0 +1,159 @@
+# ============================================================
+# Site settings
+# ============================================================
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "Tzam — Panagiotis Tzamtzis"
+tagline: "Analytics, automation, and the occasional smart-home rabbit hole"
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal site of Panagiotis (Tzam) Tzamtzis — team lead at Baresquare, 
+  runner, and incurable tinkerer with smart-home
+  systems and self-hosted infrastructure. Notes on AI, data engineering,
+  AI tooling, home automation, and whatever else is currently on the bench.
+
+# Update `url` to your final domain. Examples:
+#   - Custom domain:        https://tzam.dev
+#   - Renamed user site:    https://tzam.github.io
+#   - Current username:     https://tzamtzis.github.io
+url: "https://tzamtzis.github.io"
+baseurl: "" # leave empty for a user/organization site at the domain root
+
+# ============================================================
+# Author / identity
+# ============================================================
+author:
+  name: "Panagiotis Tzamtzis"
+  nickname: "Tzam"
+  email: "panagiotis@baresquare.com"
+  location: "Thessaloniki, Greece"
+  role: "Team Lead & Founding member @ Baresquare"
+
+email: "panagiotis@baresquare.com"
+
+# ============================================================
+# Social / external links
+# ============================================================
+# minima reads `github_username` and `linkedin_username` directly.
+# Fill in the others as you create the profiles.
+github_username: tzamtzis
+linkedin_username: tzamtzis
+twitter_username: tzam
+mastodon_username: # optional, e.g. tzam@fosstodon.org
+
+# Extra links rendered manually in templates (not used by minima by default,
+# but handy if you switch themes or build your own footer/about page).
+social_links:
+  - name: GitHub
+    url: https://github.com/tzamtzis
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/tzamtzis
+  - name: Garmin Connect
+    url: https://connect.garmin.com/modern/profile/tzamer
+  - name: Facebook
+    url: https://www.facebook.com/tzamer
+  - name: Personal website
+    url: https://tzamtzis.gr/
+
+# ============================================================
+# Build settings
+# ============================================================
+theme: minima
+# If you later want a remote theme instead of `theme:`, comment the line above
+# and uncomment below (requires the jekyll-remote-theme plugin):
+# remote_theme: mmistakes/minimal-mistakes
+
+# minima-specific options
+minima:
+  skin: auto              # options: classic, dark, auto, solarized, solarized-dark
+  date_format: "%Y-%m-%d" # ISO-style, easy to scan
+
+# Default markdown + syntax highlighting (GitHub Pages-supported)
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM              # GitHub-Flavored Markdown
+
+# Permalink structure for posts: /YYYY/MM/slug/
+permalink: /:year/:month/:title/
+
+# Pagination (requires jekyll-paginate, included in github-pages gem)
+paginate: 10
+paginate_path: "/page:num/"
+
+# Timezone for post dates
+timezone: Europe/Athens
+
+# ============================================================
+# Plugins
+# ============================================================
+# These are the plugins whitelisted by GitHub Pages.
+# Full list: https://pages.github.com/versions/
+plugins:
+  - jekyll-feed          # generates /feed.xml
+  - jekyll-seo-tag       # adds <title>, OpenGraph, Twitter cards
+  - jekyll-sitemap       # generates /sitemap.xml
+  - jekyll-paginate      # paginated post listings
+  - jekyll-redirect-from # easy redirect_from: front-matter
+
+# ============================================================
+# Navigation (used by some themes; minima reads `header_pages`)
+# ============================================================
+header_pages:
+  - about.md
+  - projects.md
+  - notes.md
+  - uses.md
+
+# ============================================================
+# Default front-matter
+# ============================================================
+# Saves you from repeating layout/author on every post or page.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "Panagiotis Tzamtzis"
+      comments: false
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# ============================================================
+# Collections (optional — uncomment if you want a /projects/ section
+# rendered from individual markdown files in _projects/)
+# ============================================================
+# collections:
+#   projects:
+#     output: true
+#     permalink: /projects/:path/
+
+# ============================================================
+# SEO / jekyll-seo-tag extras
+# ============================================================
+logo: /assets/images/logo.png  # add a 600x60 (or square) logo here when ready
+lang: en_US
+twitter:
+  username: # e.g. tzam_dev
+  card: summary
+
+# ============================================================
+# Build hygiene — files Jekyll should ignore
+# ============================================================
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
+  - .github
+  - .vscode
+  - .obsidian            # in case you draft posts in Obsidian inside the repo
